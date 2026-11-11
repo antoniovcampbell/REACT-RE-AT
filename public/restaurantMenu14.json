@@ -1,0 +1,20 @@
+[
+  {
+    "id": "14a",
+    "name": "Feijão tropeiro",
+    "price": 36,
+    "category": "Pratos principais"
+  },
+  {
+    "id": "14b",
+    "name": "Pão de queijo (6 un.)",
+    "price": 18,
+    "category": "Lanches"
+  },
+  {
+    "id": "14c",
+    "name": "Doce de leite com queijo",
+    "price": 16,
+    "category": "Sobremesas"
+  }
+]

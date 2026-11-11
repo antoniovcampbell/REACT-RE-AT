@@ -1,0 +1,10 @@
+[
+  { "id": "7a", "name": "Tonkotsu ramen", "price": 49, "category": "Ramen" },
+  { "id": "7b", "name": "Shoyu ramen", "price": 44, "category": "Ramen" },
+  {
+    "id": "7c",
+    "name": "Gyoza (6 unidades)",
+    "price": 24,
+    "category": "Entradas"
+  }
+]

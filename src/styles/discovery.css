@@ -1,0 +1,266 @@
+.discovery-section {
+  padding: 35px 0 44px;
+}
+
+.section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+}
+
+.section-eyebrow {
+  color: #718176;
+}
+
+.section-heading h2 {
+  font-size: 23px;
+  letter-spacing: -0.65px;
+  margin: 5px 0 3px;
+  color: #2d342f;
+  font-weight: 650;
+}
+
+.section-heading p {
+  font-size: 11px;
+  color: #828882;
+  margin: 0;
+}
+
+.mobile-add {
+  display: none;
+}
+
+.search-row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.search-box {
+  height: 42px;
+  flex: 1;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  padding: 0 11px;
+  gap: 9px;
+  color: #818982;
+}
+
+.search-box:focus-within {
+  border-color: #9bb4a1;
+}
+
+.search-box input {
+  border: 0;
+  outline: 0;
+  min-width: 0;
+  flex: 1;
+  color: #343b36;
+  font-size: 11px;
+  background: transparent;
+}
+
+.search-box input::placeholder {
+  color: #9da39e;
+}
+
+.search-box kbd {
+  font-family: inherit;
+  font-size: 9px;
+  color: #929a93;
+  background: #f8f9f8;
+  border: 1px solid var(--line);
+  padding: 2px 5px;
+  border-radius: 3px;
+}
+
+.search-box > button {
+  border: 0;
+  background: none;
+  color: #818982;
+  padding: 2px;
+}
+
+.results-caption {
+  width: 110px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #737c75;
+  font-size: 10px;
+}
+
+.filter-panel {
+  margin-top: 11px;
+  padding: 13px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 19px;
+}
+
+.filter-heading {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 10px;
+  font-weight: 650;
+  color: #4d554f;
+  padding-right: 16px;
+  border-right: 1px solid var(--line);
+}
+
+.filter-icon {
+  color: #637d6a;
+  display: grid;
+  place-items: center;
+}
+
+.filter-group {
+  display: grid;
+  gap: 7px;
+}
+
+.filter-label {
+  font-size: 9px;
+  color: #818982;
+  font-weight: 550;
+}
+
+.chips {
+  display: flex;
+  gap: 5px;
+}
+
+.chip {
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 5px 9px;
+  background: #fff;
+  color: #667068;
+  font-size: 9px;
+  white-space: nowrap;
+}
+
+.chip:hover {
+  border-color: #9db6a3;
+  color: var(--green);
+}
+
+.chip-active {
+  background: #edf2ee;
+  border-color: #edf2ee;
+  color: #355e41;
+  font-weight: 650;
+}
+
+.select-filter {
+  display: grid;
+  gap: 6px;
+  margin-left: auto;
+}
+
+.price-filter {
+  margin-left: 0;
+}
+
+.select-wrap,
+.sort-select-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.select-wrap select,
+.sort-select-wrap select {
+  appearance: none;
+  border: 0;
+  background: #fff;
+  padding: 0 19px 0 0;
+  color: #505a52;
+  font-size: 9px;
+  outline: 0;
+  cursor: pointer;
+}
+
+.select-wrap svg,
+.sort-select-wrap svg {
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  color: #828a83;
+}
+
+.list-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 23px 0 12px;
+}
+
+.results-title {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.results-title h3 {
+  font-size: 13px;
+  letter-spacing: -0.1px;
+  margin: 0;
+  color: #303832;
+  font-weight: 650;
+}
+
+.results-title > span {
+  color: #818981;
+  font-size: 9px;
+  background: #f2f4f2;
+  padding: 3px 7px;
+  border-radius: 3px;
+}
+
+.sort-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #7b837c;
+  font-size: 9px;
+}
+
+.sort-select-wrap {
+  padding: 6px 8px;
+  border: 1px solid var(--line);
+  background: #fff;
+  border-radius: 5px;
+}
+
+.sort-select-wrap select {
+  font-size: 9px;
+  color: #4d584f;
+}
+
+.icon-control {
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--line);
+  background: #fff;
+  border-radius: 5px;
+  display: grid;
+  place-items: center;
+  color: #68736b;
+}
+
+.icon-control:hover {
+  background: #f5f7f5;
+}
+
+.sort-reverse {
+  transform: rotate(180deg);
+}

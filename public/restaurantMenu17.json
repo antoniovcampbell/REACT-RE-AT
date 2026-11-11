@@ -1,0 +1,20 @@
+[
+  {
+    "id": "17a",
+    "name": "Taco al pastor (3 un.)",
+    "price": 38,
+    "category": "Tacos"
+  },
+  {
+    "id": "17b",
+    "name": "Quesadilla de queijo",
+    "price": 31,
+    "category": "Quesadillas"
+  },
+  {
+    "id": "17c",
+    "name": "Churros com doce de leite",
+    "price": 17,
+    "category": "Sobremesas"
+  }
+]

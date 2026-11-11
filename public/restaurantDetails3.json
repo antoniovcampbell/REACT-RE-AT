@@ -1,0 +1,10 @@
+{
+  "id": 3,
+  "name": "Casa do Baião",
+  "address": "Rua dos Ipês, 56 — Vila Mariana",
+  "phone": "(11) 3456-7892",
+  "openingHours": "Segunda a Sábado, 11h às 21h",
+  "rating": 4.7,
+  "deliveryTime": "30–40 min",
+  "description": "Comida nordestina afetiva, feita com temperos regionais e receitas tradicionais."
+}

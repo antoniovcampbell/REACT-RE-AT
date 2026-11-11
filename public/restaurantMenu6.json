@@ -1,0 +1,10 @@
+[
+  { "id": "6a", "name": "Pizza margherita", "price": 54, "category": "Pizzas" },
+  { "id": "6b", "name": "Pizza diavola", "price": 62, "category": "Pizzas" },
+  {
+    "id": "6c",
+    "name": "Cannoli siciliano",
+    "price": 19,
+    "category": "Sobremesas"
+  }
+]

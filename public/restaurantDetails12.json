@@ -1,0 +1,10 @@
+{
+  "id": 12,
+  "name": "Ramen da Praça",
+  "address": "Rua da Praça, 122 — Liberdade",
+  "phone": "(11) 3456-7801",
+  "openingHours": "Terça a Domingo, 18h às 23h",
+  "rating": 4.5,
+  "deliveryTime": "35–45 min",
+  "description": "Tigelas generosas de ramen com caldos artesanais preparados por muitas horas."
+}

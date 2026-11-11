@@ -1,0 +1,10 @@
+[
+  { "id": "10a", "name": "Penne ao pesto", "price": 39, "category": "Massas" },
+  {
+    "id": "10b",
+    "name": "Lasanha de berinjela",
+    "price": 43,
+    "category": "Massas"
+  },
+  { "id": "10c", "name": "Cannoli", "price": 18, "category": "Sobremesas" }
+]

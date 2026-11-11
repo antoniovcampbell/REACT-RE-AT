@@ -1,0 +1,15 @@
+[
+  {
+    "id": "13a",
+    "name": "Frango caipira com polenta",
+    "price": 38,
+    "category": "Pratos principais"
+  },
+  {
+    "id": "13b",
+    "name": "Picadinho brasileiro",
+    "price": 35,
+    "category": "Pratos principais"
+  },
+  { "id": "13c", "name": "Pudim da Vó", "price": 14, "category": "Sobremesas" }
+]

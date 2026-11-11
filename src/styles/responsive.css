@@ -1,0 +1,259 @@
+@media (max-width: 900px) {
+  .topbar,
+  main {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+  .footer {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+  .filter-panel {
+    gap: 11px;
+    flex-wrap: wrap;
+  }
+  .cuisine-filter {
+    order: 3;
+    width: 100%;
+  }
+  .select-filter {
+    margin-left: 0;
+  }
+  .price-filter {
+    margin-left: auto;
+  }
+  .chips {
+    flex-wrap: wrap;
+  }
+  .restaurant-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .topbar {
+    height: 58px;
+    padding: 0 14px;
+  }
+  .brand {
+    font-size: 15px;
+    gap: 6px;
+  }
+  .brand-mark {
+    width: 23px;
+    height: 23px;
+  }
+  .topnav {
+    gap: 11px;
+  }
+  .nav-link {
+    font-size: 10px;
+  }
+  .header-add {
+    display: none;
+  }
+  main {
+    padding: 0 14px;
+  }
+  .hero {
+    margin-top: 15px;
+    min-height: auto;
+  }
+  .hero-content {
+    padding: 23px 19px;
+  }
+  .hero h1 {
+    font-size: 27px;
+  }
+  .hero-content > p {
+    font-size: 10px;
+    line-height: 1.5;
+  }
+  .hero-stats {
+    gap: 10px;
+    margin-top: 15px;
+  }
+  .hero-stats i {
+    height: 20px;
+  }
+  .hero-stats strong {
+    font-size: 14px;
+  }
+  .hero-stats div span {
+    font-size: 8px;
+  }
+  .discovery-section {
+    padding: 28px 0 32px;
+  }
+  .section-heading h2 {
+    font-size: 20px;
+  }
+  .section-heading p {
+    font-size: 9px;
+  }
+  .mobile-add {
+    display: inline-flex;
+    min-height: 32px;
+    padding: 0 9px;
+    font-size: 9px;
+  }
+  .search-row {
+    gap: 8px;
+  }
+  .search-box {
+    height: 38px;
+    padding: 0 8px;
+    gap: 6px;
+  }
+  .search-box input {
+    font-size: 9px;
+  }
+  .search-box kbd {
+    display: none;
+  }
+  .results-caption {
+    width: auto;
+    font-size: 0;
+  }
+  .results-caption svg {
+    width: 16px;
+  }
+  .filter-panel {
+    padding: 10px;
+    gap: 10px;
+  }
+  .filter-heading {
+    font-size: 9px;
+    border: 0;
+    padding: 0;
+  }
+  .filter-label {
+    font-size: 8px;
+  }
+  .chip {
+    font-size: 8px;
+    padding: 5px 7px;
+  }
+  .select-filter {
+    min-width: 105px;
+  }
+  .select-wrap select {
+    font-size: 8px;
+  }
+  .list-toolbar {
+    margin: 18px 0 10px;
+    gap: 6px;
+  }
+  .results-title {
+    display: block;
+  }
+  .results-title h3 {
+    font-size: 11px;
+  }
+  .results-title > span {
+    display: inline-block;
+    margin-top: 3px;
+    font-size: 8px;
+  }
+  .sort-controls {
+    gap: 5px;
+    font-size: 8px;
+  }
+  .sort-controls > label {
+    display: none;
+  }
+  .sort-select-wrap {
+    padding: 6px;
+  }
+  .sort-select-wrap select {
+    font-size: 8px;
+  }
+  .restaurant-grid {
+    grid-template-columns: 1fr;
+    gap: 9px;
+  }
+  .restaurant-card {
+    display: grid;
+    grid-template-columns: 31% 1fr;
+    min-height: 150px;
+  }
+  .restaurant-art {
+    height: 100%;
+    min-height: 150px;
+  }
+  .art-emoji {
+    font-size: 42px;
+  }
+  .open-badge {
+    left: 5px;
+    top: 5px;
+    padding: 3px 4px;
+    font-size: 7px;
+  }
+  .heart-button {
+    right: 5px;
+    top: 5px;
+    width: 24px;
+    height: 24px;
+  }
+  .heart-button svg {
+    width: 14px;
+  }
+  .cuisine-tag {
+    right: 5px;
+    bottom: 5px;
+    font-size: 7px;
+    padding: 3px 5px;
+  }
+  .card-body {
+    padding: 9px;
+  }
+  .card-title-row h3 {
+    font-size: 11px;
+  }
+  .template-message {
+    font-size: 7px;
+  }
+  .rating {
+    font-size: 8px;
+  }
+  .description {
+    font-size: 8px;
+    height: 25px;
+    margin: 5px 0;
+  }
+  .card-meta {
+    font-size: 7px;
+    gap: 3px;
+  }
+  .card-meta svg {
+    width: 11px;
+  }
+  .card-footer {
+    margin-top: 6px;
+    padding-top: 6px;
+  }
+  .menu-count,
+  .updated {
+    font-size: 7px;
+  }
+  .details-toggle {
+    margin-top: 6px;
+    padding-top: 6px;
+    font-size: 7px;
+  }
+  .footer {
+    padding: 14px;
+    gap: 8px;
+    font-size: 7px;
+  }
+  .footer > span:nth-child(2) {
+    display: none;
+  }
+  .footer-brand {
+    font-size: 12px;
+  }
+  .form-modal {
+    padding: 18px;
+  }
+}

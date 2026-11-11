@@ -1,0 +1,15 @@
+[
+  {
+    "id": "5a",
+    "name": "Bowl verde da estação",
+    "price": 32,
+    "category": "Bowls"
+  },
+  { "id": "5b", "name": "Salada tropical", "price": 28, "category": "Saladas" },
+  {
+    "id": "5c",
+    "name": "Suco verde natural",
+    "price": 14,
+    "category": "Bebidas"
+  }
+]

@@ -1,0 +1,15 @@
+[
+  {
+    "id": "9a",
+    "name": "Tagliatelle ao ragu",
+    "price": 49,
+    "category": "Massas"
+  },
+  {
+    "id": "9b",
+    "name": "Risoto de cogumelos",
+    "price": 52,
+    "category": "Risotos"
+  },
+  { "id": "9c", "name": "Panna cotta", "price": 19, "category": "Sobremesas" }
+]

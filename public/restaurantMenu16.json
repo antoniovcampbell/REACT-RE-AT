@@ -1,0 +1,15 @@
+[
+  { "id": "16a", "name": "Dogão completo", "price": 24, "category": "Lanches" },
+  {
+    "id": "16b",
+    "name": "Hot dog de calabresa",
+    "price": 27,
+    "category": "Lanches"
+  },
+  {
+    "id": "16c",
+    "name": "Batata palito",
+    "price": 13,
+    "category": "Acompanhamentos"
+  }
+]

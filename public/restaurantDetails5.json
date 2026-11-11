@@ -1,0 +1,10 @@
+{
+  "id": 5,
+  "name": "Verde no Prato",
+  "address": "Alameda Santos, 210 — Jardins",
+  "phone": "(11) 3456-7894",
+  "openingHours": "Segunda a Sábado, 10h às 21h",
+  "rating": 4.5,
+  "deliveryTime": "20–30 min",
+  "description": "Pratos leves, saladas sazonais e opções vegetarianas preparados com hortaliças frescas."
+}

@@ -1,0 +1,15 @@
+[
+  { "id": "15a", "name": "Central burger", "price": 35, "category": "Burgers" },
+  {
+    "id": "15b",
+    "name": "Cheeseburger duplo",
+    "price": 42,
+    "category": "Burgers"
+  },
+  {
+    "id": "15c",
+    "name": "Batata crocante",
+    "price": 17,
+    "category": "Acompanhamentos"
+  }
+]

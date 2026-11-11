@@ -1,0 +1,10 @@
+[
+  { "id": "11a", "name": "Bento sakura", "price": 52, "category": "Bentôs" },
+  {
+    "id": "11b",
+    "name": "Uramaki de salmão",
+    "price": 36,
+    "category": "Sushis"
+  },
+  { "id": "11c", "name": "Missoshiro", "price": 12, "category": "Entradas" }
+]

@@ -1,0 +1,15 @@
+[
+  {
+    "id": "20a",
+    "name": "Tacos poblanos (3 un.)",
+    "price": 41,
+    "category": "Tacos"
+  },
+  { "id": "20b", "name": "Nachos Puebla", "price": 34, "category": "Entradas" },
+  {
+    "id": "20c",
+    "name": "Flan de cajeta",
+    "price": 19,
+    "category": "Sobremesas"
+  }
+]

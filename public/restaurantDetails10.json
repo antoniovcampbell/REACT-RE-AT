@@ -1,0 +1,10 @@
+{
+  "id": 10,
+  "name": "Pasta & Pesto",
+  "address": "Rua das Palmeiras, 45 — Vila Mariana",
+  "phone": "(11) 3456-7899",
+  "openingHours": "Segunda a Sábado, 11h às 22h",
+  "rating": 4.6,
+  "deliveryTime": "25–35 min",
+  "description": "Massas frescas, pesto feito diariamente e sobremesas tradicionais italianas."
+}

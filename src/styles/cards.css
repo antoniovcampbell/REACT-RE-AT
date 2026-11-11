@@ -1,0 +1,310 @@
+.restaurant-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.restaurant-card {
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: #fff;
+  overflow: hidden;
+  transition: border-color 0.15s;
+}
+
+.restaurant-card:hover {
+  border-color: #cbd5cd;
+}
+
+.restaurant-art {
+  height: 100px;
+  position: relative;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: #f4f5f2;
+}
+
+.restaurant-art:before,
+.restaurant-art:after {
+  display: none;
+}
+
+.art-emoji {
+  font-size: 48px;
+  z-index: 1;
+}
+
+.art-peach,
+.art-lavender,
+.art-yellow,
+.art-mint,
+.art-green,
+.art-pink,
+.art-blue,
+.art-orange {
+  background: #f3f5f2;
+}
+
+.open-badge {
+  position: absolute;
+  z-index: 2;
+  left: 9px;
+  top: 9px;
+  background: #fff;
+  border: 1px solid #e9ece9;
+  border-radius: 3px;
+  padding: 4px 6px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 8px;
+  font-weight: 600;
+}
+
+.open-badge.open {
+  color: #397451;
+}
+
+.open-badge.closed {
+  color: #7a807b;
+}
+
+.status-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #55916a;
+}
+
+.closed .status-dot {
+  background: #a6aca7;
+}
+
+.heart-button {
+  position: absolute;
+  z-index: 2;
+  right: 8px;
+  top: 8px;
+  width: 27px;
+  height: 27px;
+  border: 1px solid #e9ece9;
+  border-radius: 4px;
+  background: #fff;
+  display: grid;
+  place-items: center;
+  color: #767d77;
+}
+
+.heart-button:hover,
+.heart-button.is-favorite {
+  color: #b45d54;
+}
+
+.cuisine-tag {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  background: #fff;
+  color: #566057;
+  border: 1px solid #e9ece9;
+  font-size: 8px;
+  font-weight: 600;
+  padding: 4px 6px;
+  border-radius: 3px;
+}
+
+.card-body {
+  padding: 11px 12px;
+}
+
+.card-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 6px;
+}
+
+.card-title-row h3 {
+  font-size: 12px;
+  letter-spacing: -0.1px;
+  margin: 0;
+  color: #2d362f;
+  font-weight: 650;
+}
+
+.template-message {
+  margin: 3px 0 0;
+  color: #8a918b;
+  font-size: 8px;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  color: #98723a;
+  font-size: 9px;
+  font-weight: 650;
+  padding-top: 1px;
+}
+
+.description {
+  height: 29px;
+  overflow: hidden;
+  margin: 7px 0 8px;
+  color: #717a73;
+  font-size: 9px;
+  line-height: 1.5;
+}
+
+.card-meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #707972;
+  font-size: 8px;
+}
+
+.card-meta span:first-child {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.card-footer {
+  border-top: 1px solid #eff1ef;
+  margin-top: 9px;
+  padding-top: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-count {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  color: #58745f;
+  font-size: 8px;
+  font-weight: 600;
+}
+
+.updated {
+  color: #8a918b;
+  font-size: 8px;
+}
+
+.details-toggle {
+  margin-top: 9px;
+  padding: 7px 0 0;
+  border: 0;
+  border-top: 1px solid #eff1ef;
+  background: none;
+  color: #526d59;
+  font-size: 8px;
+  font-weight: 600;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.details-toggle svg {
+  transition: transform 0.15s;
+}
+
+.details-toggle .rotate {
+  transform: rotate(180deg);
+}
+
+.card-details {
+  padding-top: 9px;
+}
+
+.specialty {
+  font-size: 9px;
+  font-weight: 650;
+  color: #344a39;
+  margin: 0 0 5px;
+}
+
+.address {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 8px;
+  color: #7e877f;
+  margin: 0 0 9px;
+}
+
+.menu-list > strong {
+  font-size: 8px;
+  color: #536057;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  border-top: 1px solid #eff1ef;
+  padding: 6px 0;
+  font-size: 8px;
+  color: #525b54;
+}
+
+.menu-item:first-of-type {
+  margin-top: 4px;
+}
+
+.menu-item > span:last-child {
+  white-space: nowrap;
+  font-weight: 600;
+  color: #42614a;
+}
+
+.menu-item small {
+  display: block;
+  margin-top: 2px;
+  font-size: 7px;
+  color: #929992;
+}
+
+.detail-loading {
+  font-size: 8px;
+  color: #858c86;
+}
+
+.inline-error {
+  font-size: 8px;
+  color: #a44;
+}
+
+.card-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.card-actions button {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 6px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: #fff;
+  color: #69736b;
+  font-size: 8px;
+}
+
+.card-actions button:hover {
+  border-color: #b8c7ba;
+  color: var(--green);
+}
+
+.card-actions button:last-child:hover {
+  border-color: #d9b9b5;
+  color: #a44f46;
+}

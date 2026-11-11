@@ -1,0 +1,20 @@
+[
+  {
+    "id": "18a",
+    "name": "Burrito de carne",
+    "price": 46,
+    "category": "Burritos"
+  },
+  {
+    "id": "18b",
+    "name": "Burrito vegetariano",
+    "price": 39,
+    "category": "Burritos"
+  },
+  {
+    "id": "18c",
+    "name": "Nachos com guacamole",
+    "price": 28,
+    "category": "Entradas"
+  }
+]

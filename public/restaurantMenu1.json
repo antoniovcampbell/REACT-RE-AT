@@ -1,0 +1,15 @@
+[
+  { "id": "1a", "name": "Nhoque da Nonna", "price": 42, "category": "Massas" },
+  {
+    "id": "1b",
+    "name": "Ravioli de ricota",
+    "price": 48,
+    "category": "Massas"
+  },
+  {
+    "id": "1c",
+    "name": "Tiramisù da casa",
+    "price": 22,
+    "category": "Sobremesas"
+  }
+]

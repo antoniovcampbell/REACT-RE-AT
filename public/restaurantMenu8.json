@@ -1,0 +1,10 @@
+[
+  { "id": "8a", "name": "Smash clássico", "price": 29, "category": "Burgers" },
+  { "id": "8b", "name": "Smash bacon", "price": 35, "category": "Burgers" },
+  {
+    "id": "8c",
+    "name": "Milkshake de baunilha",
+    "price": 18,
+    "category": "Bebidas"
+  }
+]

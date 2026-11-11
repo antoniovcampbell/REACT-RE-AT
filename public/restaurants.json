@@ -1,0 +1,162 @@
+[
+  {
+    "id": 1,
+    "name": "O Forno da Nonna",
+    "cuisine": "Italiana",
+    "isOpen": true,
+    "lastUpdate": "2026-10-05T14:30:00Z",
+    "description": "Massas artesanais e receitas de família feitas com ingredientes frescos."
+  },
+  {
+    "id": 2,
+    "name": "Nori & Neko",
+    "cuisine": "Japonesa",
+    "isOpen": true,
+    "lastUpdate": "2026-10-04T11:15:00Z",
+    "description": "Sushi contemporâneo, combinados caprichados e sabores do Japão."
+  },
+  {
+    "id": 3,
+    "name": "Casa do Baião",
+    "cuisine": "Brasileira",
+    "isOpen": false,
+    "lastUpdate": "2026-10-03T18:00:00Z",
+    "description": "Comida afetiva nordestina com baião de dois, carne de sol e muito sabor."
+  },
+  {
+    "id": 4,
+    "name": "Brasa Burger",
+    "cuisine": "Fast Food",
+    "isOpen": true,
+    "lastUpdate": "2026-10-06T09:45:00Z",
+    "description": "Hambúrgueres na brasa, pão fresquinho e acompanhamentos irresistíveis."
+  },
+  {
+    "id": 5,
+    "name": "Verde no Prato",
+    "cuisine": "Brasileira",
+    "isOpen": true,
+    "lastUpdate": "2026-10-01T12:20:00Z",
+    "description": "Pratos brasileiros leves, saladas sazonais e opções vegetarianas."
+  },
+  {
+    "id": 6,
+    "name": "Bella Napoli",
+    "cuisine": "Italiana",
+    "isOpen": false,
+    "lastUpdate": "2026-09-29T16:10:00Z",
+    "description": "Pizzas de fermentação natural e clássicos italianos direto do forno."
+  },
+  {
+    "id": 7,
+    "name": "Tokyo Ramen Club",
+    "cuisine": "Japonesa",
+    "isOpen": true,
+    "lastUpdate": "2026-10-02T10:00:00Z",
+    "description": "Ramen preparado por horas, com caldos intensos e toppings especiais."
+  },
+  {
+    "id": 8,
+    "name": "Ponto do Smash",
+    "cuisine": "Fast Food",
+    "isOpen": true,
+    "lastUpdate": "2026-10-06T12:00:00Z",
+    "description": "Smash burgers suculentos, batatas crocantes e milkshakes cremosos."
+  },
+  {
+    "id": 9,
+    "name": "Trattoria Firenze",
+    "cuisine": "Italiana",
+    "isOpen": true,
+    "lastUpdate": "2026-10-07T10:00:00Z",
+    "description": "Risotos e massas clássicas preparados com ingredientes sazonais."
+  },
+  {
+    "id": 10,
+    "name": "Pasta & Pesto",
+    "cuisine": "Italiana",
+    "isOpen": false,
+    "lastUpdate": "2026-10-06T17:00:00Z",
+    "description": "Massas frescas, pesto feito na casa e sobremesas italianas."
+  },
+  {
+    "id": 11,
+    "name": "Sakura Bento",
+    "cuisine": "Japonesa",
+    "isOpen": true,
+    "lastUpdate": "2026-10-07T09:15:00Z",
+    "description": "Bentôs equilibrados, sushis frescos e pratos quentes japoneses."
+  },
+  {
+    "id": 12,
+    "name": "Ramen da Praça",
+    "cuisine": "Japonesa",
+    "isOpen": false,
+    "lastUpdate": "2026-10-03T13:00:00Z",
+    "description": "Tigelas generosas de ramen com caldos cozidos lentamente."
+  },
+  {
+    "id": 13,
+    "name": "Quintal da Vó",
+    "cuisine": "Brasileira",
+    "isOpen": true,
+    "lastUpdate": "2026-10-06T11:00:00Z",
+    "description": "Receitas caseiras brasileiras servidas com carinho e ingredientes locais."
+  },
+  {
+    "id": 14,
+    "name": "Sabor de Minas",
+    "cuisine": "Brasileira",
+    "isOpen": true,
+    "lastUpdate": "2026-10-05T15:00:00Z",
+    "description": "Pão de queijo, feijão tropeiro e quitutes tradicionais mineiros."
+  },
+  {
+    "id": 15,
+    "name": "Burgueria Central",
+    "cuisine": "Fast Food",
+    "isOpen": true,
+    "lastUpdate": "2026-10-07T12:00:00Z",
+    "description": "Hambúrgueres artesanais, opções clássicas e acompanhamentos crocantes."
+  },
+  {
+    "id": 16,
+    "name": "Dogão da Esquina",
+    "cuisine": "Fast Food",
+    "isOpen": false,
+    "lastUpdate": "2026-10-04T20:00:00Z",
+    "description": "Cachorros-quentes completos e lanches rápidos para matar a fome."
+  },
+  {
+    "id": 17,
+    "name": "Taco Loco",
+    "cuisine": "Mexicana",
+    "isOpen": true,
+    "lastUpdate": "2026-10-07T12:30:00Z",
+    "description": "Tacos preparados na hora com tortillas artesanais e molhos da casa."
+  },
+  {
+    "id": 18,
+    "name": "Casa de Agave",
+    "cuisine": "Mexicana",
+    "isOpen": true,
+    "lastUpdate": "2026-10-06T16:30:00Z",
+    "description": "Burritos, guacamole fresco e pratos inspirados na culinária mexicana."
+  },
+  {
+    "id": 19,
+    "name": "El Milho",
+    "cuisine": "Mexicana",
+    "isOpen": false,
+    "lastUpdate": "2026-10-05T14:00:00Z",
+    "description": "Quesadillas e especialidades mexicanas com milho e pimentas selecionadas."
+  },
+  {
+    "id": 20,
+    "name": "Puebla Taqueria",
+    "cuisine": "Mexicana",
+    "isOpen": true,
+    "lastUpdate": "2026-10-07T11:30:00Z",
+    "description": "Sabores de Puebla em tacos, nachos e pratos para compartilhar."
+  }
+]

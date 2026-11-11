@@ -1,0 +1,10 @@
+[
+  {
+    "id": "2a",
+    "name": "Combinado Nori (20 peças)",
+    "price": 78,
+    "category": "Combinados"
+  },
+  { "id": "2b", "name": "Sashimi especial", "price": 54, "category": "Sushis" },
+  { "id": "2c", "name": "Temaki de salmão", "price": 32, "category": "Sushis" }
+]

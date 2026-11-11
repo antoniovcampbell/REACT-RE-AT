@@ -1,0 +1,10 @@
+[
+  { "id": "12a", "name": "Ramen shoyu", "price": 44, "category": "Ramen" },
+  { "id": "12b", "name": "Ramen miso", "price": 47, "category": "Ramen" },
+  {
+    "id": "12c",
+    "name": "Gyoza de legumes",
+    "price": 22,
+    "category": "Entradas"
+  }
+]

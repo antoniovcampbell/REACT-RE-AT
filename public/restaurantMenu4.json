@@ -1,0 +1,10 @@
+[
+  { "id": "4a", "name": "Brasa clássica", "price": 34, "category": "Burgers" },
+  { "id": "4b", "name": "Smash duplo", "price": 39, "category": "Burgers" },
+  {
+    "id": "4c",
+    "name": "Batata rústica",
+    "price": 16,
+    "category": "Acompanhamentos"
+  }
+]

@@ -1,0 +1,10 @@
+[
+  {
+    "id": "19a",
+    "name": "Quesadilla de milho",
+    "price": 33,
+    "category": "Quesadillas"
+  },
+  { "id": "19b", "name": "Taco de carnitas", "price": 36, "category": "Tacos" },
+  { "id": "19c", "name": "Elote mexicano", "price": 18, "category": "Entradas" }
+]
