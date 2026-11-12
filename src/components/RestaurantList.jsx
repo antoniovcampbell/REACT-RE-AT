@@ -23,7 +23,13 @@ export default function RestaurantList({
       {restaurants.map((restaurant) => (
         <RestaurantCard
           key={restaurant.id}
-          restaurant={restaurant}
+          id={restaurant.id}
+          name={restaurant.name}
+          cuisine={restaurant.cuisine}
+          isOpen={restaurant.isOpen}
+          description={restaurant.description}
+          lastUpdate={restaurant.lastUpdate}
+          emoji={restaurant.emoji}
           details={detailsById[restaurant.id]}
           favorite={favorites.includes(restaurant.id)}
           onFavorite={onFavorite}

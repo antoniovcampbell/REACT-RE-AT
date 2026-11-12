@@ -11,8 +11,9 @@ import RestaurantForm from "./RestaurantForm.jsx";
 import RestaurantList from "./RestaurantList.jsx";
 import SortControls from "./SortControls.jsx";
 
-export default function Dashboard() {
-  const [isFormVisible, setIsFormVisible] = useState(false);
+const EMPTY_MENU = [];
+
+export default function Dashboard({ isFormVisible, toggleForm }) {
   const [editingRestaurant, setEditingRestaurant] = useState(null);
   const [favoritesOnly, setFavoritesOnly] = useState(false);
   const {
@@ -37,18 +38,20 @@ export default function Dashboard() {
 
   function openCreateForm() {
     setEditingRestaurant(null);
-    setIsFormVisible(true);
+    toggleForm(true);
   }
 
-  function openEditForm(restaurant) {
+  function openEditForm(restaurantId) {
+    const restaurant = restaurants.find((item) => item.id === restaurantId);
+    if (!restaurant) return;
     setEditingRestaurant(restaurant);
-    setIsFormVisible(true);
+    toggleForm(true);
   }
 
   function handleSaveRestaurant(restaurant) {
     if (editingRestaurant) updateRestaurant(editingRestaurant.id, restaurant);
     else addRestaurant(restaurant);
-    setIsFormVisible(false);
+    toggleForm(false);
     setEditingRestaurant(null);
     discovery.setCurrentPage(1);
   }
@@ -56,7 +59,7 @@ export default function Dashboard() {
   function handleDeleteRestaurant(restaurantId) {
     deleteRestaurant(restaurantId);
     if (editingRestaurant?.id === restaurantId) {
-      setIsFormVisible(false);
+      toggleForm(false);
       setEditingRestaurant(null);
     }
   }
@@ -194,8 +197,13 @@ export default function Dashboard() {
         <RestaurantForm
           key={editingRestaurant?.id ?? "new"}
           initialRestaurant={editingRestaurant}
+          initialMenu={
+            editingRestaurant
+              ? (detailsById[editingRestaurant.id]?.menu ?? EMPTY_MENU)
+              : EMPTY_MENU
+          }
           onSubmit={handleSaveRestaurant}
-          onClose={() => setIsFormVisible(false)}
+          onClose={() => toggleForm(false)}
         />
       )}
     </div>

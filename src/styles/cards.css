@@ -9,11 +9,13 @@
   border-radius: 7px;
   background: #fff;
   overflow: hidden;
-  transition: border-color 0.15s;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  box-shadow: 0 1px 2px rgba(20, 32, 22, 0.06);
 }
 
 .restaurant-card:hover {
   border-color: #cbd5cd;
+  box-shadow: 0 8px 20px rgba(20, 32, 22, 0.1);
 }
 
 .restaurant-art {
@@ -81,7 +83,7 @@
   background: #a6aca7;
 }
 
-.heart-button {
+.favorite-button {
   position: absolute;
   z-index: 2;
   right: 8px;
@@ -96,8 +98,8 @@
   color: #767d77;
 }
 
-.heart-button:hover,
-.heart-button.is-favorite {
+.favorite-button:hover,
+.favorite-button.is-favorite {
   color: #b45d54;
 }
 

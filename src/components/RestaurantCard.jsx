@@ -2,7 +2,6 @@ import { useState } from "react";
 import {
   ChevronDown,
   Clock3,
-  Heart,
   MapPin,
   Pencil,
   Star,
@@ -49,7 +48,13 @@ function RestaurantDetails({ details, menu }) {
 }
 
 export default function RestaurantCard({
-  restaurant,
+  id,
+  name,
+  cuisine,
+  isOpen,
+  description,
+  lastUpdate,
+  emoji,
   details,
   favorite,
   onFavorite,
@@ -57,10 +62,10 @@ export default function RestaurantCard({
   onDelete,
 }) {
   const [expanded, setExpanded] = useState(false);
-  const updateLabel = new Date(restaurant.lastUpdate).toLocaleDateString(
-    "pt-BR",
-    { day: "numeric", month: "short" },
-  );
+  const updateLabel = new Date(lastUpdate).toLocaleDateString("pt-BR", {
+    day: "numeric",
+    month: "short",
+  });
   const menu = details?.menu ?? [];
   const averageMenuPrice = menu.length
     ? menu.reduce((total, dish) => total + Number(dish.price || 0), 0) /
@@ -72,36 +77,36 @@ export default function RestaurantCard({
     <article className="restaurant-card">
       <div className="restaurant-art">
         <span className="art-emoji" aria-hidden="true">
-          {getRestaurantEmoji(restaurant)}
+          {getRestaurantEmoji({ id, cuisine, emoji })}
         </span>
-        <span className={`open-badge ${restaurant.isOpen ? "open" : "closed"}`}>
+        <span className={`open-badge ${isOpen ? "open" : "closed"}`}>
           <span className="status-dot" />
-          {restaurant.isOpen ? "Aberto" : "Fechado"}
+          {isOpen ? "Aberto" : "Fechado"}
         </span>
         <button
-          className={`heart-button ${favorite ? "is-favorite" : ""}`}
-          onClick={() => onFavorite(restaurant.id)}
+          className={`favorite-button ${favorite ? "is-favorite" : ""}`}
+          onClick={() => onFavorite(id)}
           aria-label={
             favorite ? "Remover dos favoritos" : "Adicionar aos favoritos"
           }
           aria-pressed={favorite}
         >
-          <Heart size={18} fill={favorite ? "currentColor" : "none"} />
+          <Star size={18} fill={favorite ? "currentColor" : "none"} />
         </button>
-        <span className="cuisine-tag">{restaurant.cuisine}</span>
+        <span className="cuisine-tag">{cuisine}</span>
       </div>
       <div className="card-body">
         <div className="card-title-row">
           <div>
-            <h3>{restaurant.name}</h3>
-            <p className="template-message">{`Restaurante: ${restaurant.name} - Cozinha: ${restaurant.cuisine}`}</p>
+            <h3>{name}</h3>
+            <p className="template-message">{`Restaurante: ${name} - Cozinha: ${cuisine}`}</p>
           </div>
           <span className="rating">
             <Star size={14} fill="currentColor" />
             {rating ? rating.toFixed(1) : "Novo"}
           </span>
         </div>
-        <p className="description">{restaurant.description}</p>
+        <p className="description">{description}</p>
         <div className="card-meta">
           <span>
             <Clock3 size={14} />
@@ -146,16 +151,16 @@ export default function RestaurantCard({
         <div className="card-actions">
           <button
             type="button"
-            onClick={() => onEdit(restaurant)}
-            aria-label={`Editar ${restaurant.name}`}
+            onClick={() => onEdit(id)}
+            aria-label={`Editar ${name}`}
           >
             <Pencil size={13} />
             Editar
           </button>
           <button
             type="button"
-            onClick={() => onDelete(restaurant.id)}
-            aria-label={`Excluir ${restaurant.name}`}
+            onClick={() => onDelete(id)}
+            aria-label={`Excluir ${name}`}
           >
             <Trash2 size={13} />
             Excluir

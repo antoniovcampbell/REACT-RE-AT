@@ -1,4 +1,4 @@
-import { Heart, Plus, UtensilsCrossed } from "lucide-react";
+import { Plus, Star, UtensilsCrossed } from "lucide-react";
 
 export default function Header({
   favoritesOnly,
@@ -24,7 +24,7 @@ export default function Header({
           className={`nav-link favorite-nav ${favoritesOnly ? "selected" : ""}`}
           onClick={onFavorites}
         >
-          <Heart size={16} fill={favoritesOnly ? "currentColor" : "none"} />{" "}
+          <Star size={16} fill={favoritesOnly ? "currentColor" : "none"} />{" "}
           Favoritos
         </button>
       </nav>

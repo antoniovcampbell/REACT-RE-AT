@@ -8,7 +8,7 @@ import {
   saveRestaurantChanges,
 } from "../services/restaurantStorage.js";
 
-function emptyDetailsFor(restaurant) {
+function emptyDetailsFor(restaurant, menu = []) {
   return {
     details: {
       id: restaurant.id,
@@ -20,7 +20,7 @@ function emptyDetailsFor(restaurant) {
       deliveryTime: "30–40 min",
       description: restaurant.description,
     },
-    menu: [],
+    menu,
     loading: false,
     error: "",
   };
@@ -77,7 +77,10 @@ export function useRestaurantData() {
             restaurantsWithChanges.map((restaurant) => [
               restaurant.id,
               createdIds.has(restaurant.id)
-                ? emptyDetailsFor(restaurant)
+                ? emptyDetailsFor(
+                    restaurant,
+                    changes.menus[restaurant.id] ?? [],
+                  )
                 : { loading: true, details: null, menu: [], error: "" },
             ]),
           ),
@@ -117,11 +120,17 @@ export function useRestaurantData() {
             }
           }),
         ).then((entries) => {
-          if (isCurrent)
-            setDetailsById((current) => ({
-              ...current,
-              ...Object.fromEntries(entries),
-            }));
+          if (!isCurrent) return;
+          const latestMenus = readRestaurantChanges().menus;
+          const mergedEntries = entries.map(([entryId, entry]) =>
+            latestMenus[entryId]
+              ? [entryId, { ...entry, menu: latestMenus[entryId] }]
+              : [entryId, entry],
+          );
+          setDetailsById((current) => ({
+            ...current,
+            ...Object.fromEntries(mergedEntries),
+          }));
         });
       })
       .catch((fetchError) => {
@@ -140,24 +149,29 @@ export function useRestaurantData() {
   }, []);
 
   const addRestaurant = useCallback((restaurant) => {
-    const newRestaurant = { ...restaurant, id: nextIdRef.current };
+    const { menu, ...fields } = restaurant;
+    const newRestaurant = { ...fields, id: nextIdRef.current };
     nextIdRef.current += 1;
 
     setRestaurants((current) => [newRestaurant, ...current]);
     setDetailsById((current) => ({
       ...current,
-      [newRestaurant.id]: emptyDetailsFor(newRestaurant),
+      [newRestaurant.id]: emptyDetailsFor(newRestaurant, menu ?? []),
     }));
     const changes = readRestaurantChanges();
     saveRestaurantChanges({
       ...changes,
       added: [newRestaurant, ...changes.added],
+      menus: menu
+        ? { ...changes.menus, [newRestaurant.id]: menu }
+        : changes.menus,
     });
     return newRestaurant;
   }, []);
 
   const updateRestaurant = useCallback(
     (restaurantId, updates) => {
+      const { menu, ...restaurantUpdates } = updates;
       const currentRestaurant = restaurants.find(
         (restaurant) => restaurant.id === restaurantId,
       );
@@ -165,7 +179,7 @@ export function useRestaurantData() {
 
       const updatedRestaurant = {
         ...currentRestaurant,
-        ...updates,
+        ...restaurantUpdates,
         id: restaurantId,
       };
       setRestaurants((current) =>
@@ -175,16 +189,21 @@ export function useRestaurantData() {
       );
       setDetailsById((current) => {
         const currentDetails = current[restaurantId];
-        if (!currentDetails?.details) return current;
+        if (!currentDetails) return current;
         return {
           ...current,
           [restaurantId]: {
             ...currentDetails,
-            details: {
-              ...currentDetails.details,
-              name: updatedRestaurant.name,
-              description: updatedRestaurant.description,
-            },
+            menu: menu ?? currentDetails.menu,
+            ...(currentDetails.details
+              ? {
+                  details: {
+                    ...currentDetails.details,
+                    name: updatedRestaurant.name,
+                    description: updatedRestaurant.description,
+                  },
+                }
+              : {}),
           },
         };
       });
@@ -193,19 +212,20 @@ export function useRestaurantData() {
       const isCreatedHere = changes.added.some(
         (restaurant) => restaurant.id === restaurantId,
       );
-      if (isCreatedHere) {
-        saveRestaurantChanges({
-          ...changes,
-          added: changes.added.map((restaurant) =>
-            restaurant.id === restaurantId ? updatedRestaurant : restaurant,
-          ),
-        });
-      } else {
-        saveRestaurantChanges({
-          ...changes,
-          updated: { ...changes.updated, [restaurantId]: updatedRestaurant },
-        });
-      }
+      saveRestaurantChanges({
+        ...changes,
+        added: isCreatedHere
+          ? changes.added.map((restaurant) =>
+              restaurant.id === restaurantId ? updatedRestaurant : restaurant,
+            )
+          : changes.added,
+        updated: isCreatedHere
+          ? changes.updated
+          : { ...changes.updated, [restaurantId]: updatedRestaurant },
+        menus: menu
+          ? { ...changes.menus, [restaurantId]: menu }
+          : changes.menus,
+      });
 
       return updatedRestaurant;
     },
@@ -234,11 +254,14 @@ export function useRestaurantData() {
       );
       const remainingUpdates = { ...changes.updated };
       delete remainingUpdates[restaurantId];
+      const remainingMenus = { ...changes.menus };
+      delete remainingMenus[restaurantId];
       saveRestaurantChanges({
         added: wasCreatedHere
           ? changes.added.filter((restaurant) => restaurant.id !== restaurantId)
           : changes.added,
         updated: remainingUpdates,
+        menus: remainingMenus,
         deleted:
           wasCreatedHere || changes.deleted.includes(restaurantId)
             ? changes.deleted

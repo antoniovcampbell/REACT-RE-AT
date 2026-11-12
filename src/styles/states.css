@@ -120,6 +120,7 @@
   border: 1px solid var(--line);
   border-radius: 8px;
   padding: 22px;
+  box-shadow: 0 24px 48px rgba(10, 18, 12, 0.28);
 }
 
 .modal-heading {
@@ -227,6 +228,98 @@
 .emoji-option.selected {
   border-color: var(--green);
   background: #f1f5f1;
+}
+
+.menu-editor {
+  min-width: 0;
+  margin: 0;
+  padding: 11px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: #fafbfa;
+}
+
+.menu-editor legend {
+  padding: 0 5px;
+  color: #59645b;
+  font-size: 9px;
+  font-weight: 600;
+}
+
+.menu-editor-hint {
+  margin: 0 0 8px;
+  font-size: 9px;
+  color: #8a918b;
+}
+
+.menu-editor-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 6px;
+}
+
+.menu-editor-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 66px 26px;
+  gap: 5px;
+  align-items: center;
+}
+
+.menu-editor-row input {
+  min-width: 0;
+}
+
+.menu-editor-price {
+  text-align: right;
+}
+
+.menu-editor-empty {
+  margin: 0;
+  font-size: 9px;
+  color: #9da49e;
+}
+
+.menu-editor-add {
+  margin-top: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 9px;
+  border: 1px dashed var(--line);
+  border-radius: 5px;
+  background: #fff;
+  color: var(--green);
+  font-size: 9px;
+  font-weight: 600;
+}
+
+.menu-editor-add:hover {
+  border-color: var(--green);
+  background: #f1f5f1;
+}
+
+.menu-editor-remove {
+  width: 26px;
+  height: 26px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  background: #fff;
+  color: #8a918b;
+}
+
+.menu-editor-remove:hover {
+  border-color: #d9b9b5;
+  color: #a44f46;
+}
+
+.menu-editor-error {
+  margin: 7px 0 0;
+  font-size: 9px;
+  color: #a44;
 }
 
 .header-add:disabled,

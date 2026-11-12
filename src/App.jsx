@@ -1,5 +1,13 @@
-import Dashboard from './components/Dashboard.jsx';
+import { useState } from "react";
+import Dashboard from "./components/Dashboard.jsx";
 
 export default function App() {
-  return <Dashboard />;
+  const [isFormVisible, setIsFormVisible] = useState(false);
+
+  const toggleForm = (value) =>
+    setIsFormVisible((current) =>
+      typeof value === "boolean" ? value : !current,
+    );
+
+  return <Dashboard isFormVisible={isFormVisible} toggleForm={toggleForm} />;
 }

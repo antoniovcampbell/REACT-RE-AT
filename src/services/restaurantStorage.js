@@ -1,6 +1,6 @@
 const STORAGE_KEY = "flavordash-restaurant-changes";
 
-const EMPTY_CHANGES = { added: [], updated: {}, deleted: [] };
+const EMPTY_CHANGES = { added: [], updated: {}, deleted: [], menus: {} };
 
 export function readRestaurantChanges() {
   try {
@@ -16,6 +16,10 @@ export function readRestaurantChanges() {
           ? savedChanges.updated
           : {},
       deleted: Array.isArray(savedChanges.deleted) ? savedChanges.deleted : [],
+      menus:
+        savedChanges.menus && typeof savedChanges.menus === "object"
+          ? savedChanges.menus
+          : {},
     };
   } catch {
     return EMPTY_CHANGES;

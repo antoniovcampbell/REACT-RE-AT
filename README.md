@@ -33,13 +33,14 @@ Os dados são arquivos estáticos em `public/`, consumidos pela Fetch API:
 - `restaurantDetails{id}.json`: detalhes individuais no formato `id`, `name`, `address`, `phone`, `openingHours`, `rating`, `deliveryTime` e `description`.
 - `restaurantMenu{id}.json`: pratos de cada restaurante, com `id`, `name`, `price` e `category`.
 
-O preço médio usado nos filtros é calculado a partir dos preços dos pratos do cardápio. Para adicionar dados estáticos, mantenha o mesmo ID nos arquivos de detalhes e cardápio associados. Cadastros, edições e exclusões feitos pela interface são guardados no `localStorage`; os JSONs originais permanecem inalterados. Para restaurar o catálogo original, remova a chave `flavordash-restaurant-changes` do armazenamento local do navegador.
+O preço médio usado nos filtros é calculado a partir dos preços dos pratos do cardápio. Para adicionar dados estáticos, mantenha o mesmo ID nos arquivos de detalhes e cardápio associados. Cadastros, edições e exclusões de restaurantes e alterações no cardápio (adicionar, editar e remover pratos) feitos pela interface são guardados no `localStorage`; os JSONs originais permanecem inalterados. Para restaurar o catálogo original, remova a chave `flavordash-restaurant-changes` do armazenamento local do navegador.
 
 ## Funcionalidades
 
 - Busca por nome, cozinha e descrição.
 - Filtros combináveis por cozinha, funcionamento e preço médio.
 - CRUD de restaurantes com escolha de emoji no cadastro e na edição.
+- Edição do cardápio na mesma tela do restaurante: adicionar, editar e remover pratos.
 - Ordenação por nome, cozinha, atualização, funcionamento e quantidade de pratos.
 - Paginação da lista.
 - Favoritos persistidos no `localStorage`.

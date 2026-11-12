@@ -190,13 +190,13 @@
     padding: 3px 4px;
     font-size: 7px;
   }
-  .heart-button {
+  .favorite-button {
     right: 5px;
     top: 5px;
     width: 24px;
     height: 24px;
   }
-  .heart-button svg {
+  .favorite-button svg {
     width: 14px;
   }
   .cuisine-tag {
@@ -255,5 +255,11 @@
   }
   .form-modal {
     padding: 18px;
+  }
+  .menu-editor-row {
+    grid-template-columns: 1fr 62px 26px;
+  }
+  .menu-editor-row input:first-child {
+    grid-column: 1 / -1;
   }
 }
